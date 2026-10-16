@@ -1,0 +1,5 @@
+{
+  "name": "dsa-deck-toolkit",
+  "private": true,
+  "dependencies": { "pptxgenjs": "*", "react-icons": "*", "react": "*", "react-dom": "*", "sharp": "*", "jszip": "*" }
+}
