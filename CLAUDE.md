@@ -54,6 +54,16 @@ Recurring checks: validate the customer's partial code before trusting it (joins
 row counts and sums to raw. Separate waste / inefficiency / investment / healthy baseline. Never blame
 individuals on slides.
 
+## Sample deck (the reference for look, flow and tone)
+- `toolkit/deck/sample_deck_cascade.pptx` is the finished 16-slide deck from the mock (fictional Cascade Outfitters data).
+- `toolkit/deck/sample_deck_preview_1.jpg` and `_2.jpg` are thumbnail grids of every slide. Look at these first.
+- `toolkit/deck/example_build_cascade.js` is the script that built it. **To make a new deck, copy this script and
+  swap in the new content.** Don't start from scratch.
+- Read the sample's text and notes with `markitdown toolkit/deck/sample_deck_cascade.pptx`.
+- Never reuse the sample's numbers or names. They belong to the mock scenario only.
+- Speaker notes: short spoken prompts (2–3 bullets per slide), not a script. Remind Vikas to share only the slideshow
+  window, and to strip the notes before sending the file to anyone.
+
 ## Deck style (reuse `toolkit/deck/example_build_cascade.js`)
 - pptxgenjs, `LAYOUT_WIDE`, dark Databricks look: bg `182C31`, deep `0B1D21`, cards `1F3A40`, text `F2EEEC`,
   muted `A9B8BB`, accent red `FF3621`, amber `F5A623`, green `2BB673`, teal `5FB4C9`, grey `8FA3A8`. Calibri only.
