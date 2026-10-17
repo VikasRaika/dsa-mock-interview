@@ -37,8 +37,32 @@ runs in Databricks, through the in-workspace Assistant or SQL.
 - Explain any jargon in brackets the first time, e.g. "idempotent (safe to run twice)".
 - Keep it short. Use bullets and small tables. Add detail only if he asks.
 
+## Explain as you go (Vikas wants to learn, not just get answers)
+**When the prompt and scaffold arrive, give an overview before touching anything:**
+1. **The prompt in 6 lines:** the customer, their pain, what they're asking for, who's in the room and what each
+   person cares about, the deadline or constraints, and the decision they need.
+2. **Each scaffold doc in 3–4 bullets:** README.md, SETUP.md, FAQ.md and AI_WORKFLOWS.md. What's in it, and anything
+   that hints at a trap ("verify this", "numbers look high", "unverified").
+3. **The code:** what each file and job does, which parts are pre-built and which are partial, and what looks
+   suspicious (joins, tag keys, date filters, hard-coded values).
+4. **First hypotheses:** 5–8 guesses at what's going on, to test with data.
+
+**After every analysis step, explain it in this order:**
+- **What we did:** one line.
+- **What we found:** the numbers, per month.
+- **Insight (so what?):** what it means for the business, in plain words.
+- **Improvement:** how to fix it, or what to check next.
+- **Question for the call:** anything the data can't answer becomes a discovery question.
+
+Keep a running notes file at `work/insights.md` (git-ignored) with findings, numbers, open questions and the
+story so far, so the deck can be built from it at the end.
+
+## Starting a session
+Follow `START_SESSION.md`. Use the Databricks CLI profile Vikas names (`-p <profile>`), check `databricks
+current-user me` before anything else, and keep everything from the real interview inside `work/`.
+
 ## Rules
-- The real prompt is under NDA. Keep its contents in this session only. Never commit the real prompt,
+- The real prompt is under NDA. Keep its contents in this session and in `work/` only. Never commit the real prompt,
   scaffold or data to this repo, and never push them anywhere.
 - No inside knowledge exists for the real scenario. Review only what Vikas pastes.
 - Timebox: 4 hours total. Push him to stop analysing at about 2:15 and start the story.
