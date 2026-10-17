@@ -31,6 +31,12 @@ runs in Databricks, through the in-workspace Assistant or SQL.
 - The same discipline still applies: after every change, re-run, reconcile to raw, and show the check, not just the result.
 - Leave dashboards and Genie spaces to the workspace UI and its Assistant; they are faster to build there.
 
+## How to talk to Vikas
+- Plain, simple English. Short sentences. Explain like a friendly colleague, not a textbook.
+- Lead with the answer in one or two lines, then a small example.
+- Explain any jargon in brackets the first time, e.g. "idempotent (safe to run twice)".
+- Keep it short. Use bullets and small tables. Add detail only if he asks.
+
 ## Rules
 - The real prompt is under NDA. Keep its contents in this session only. Never commit the real prompt,
   scaffold or data to this repo, and never push them anywhere.
