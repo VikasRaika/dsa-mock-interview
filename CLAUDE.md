@@ -4,6 +4,26 @@ This repo is Vikas's prep kit for the Databricks DSA "Build, Demo, Pitch" round.
 Claude session opens this repo and acts as **reviewer and deck builder**. It is not the analyst: the analysis
 runs in Databricks, through the in-workspace Assistant or SQL.
 
+## What the round expects (from the official instructions)
+- **Format:** the prompt arrives 24 hours before the slot. Spend at most 4 hours on prep and build. Then a 60-minute
+  mock customer call with a Business Leader, a CTO and a VP of Engineering: discovery, demo, stakeholder questions.
+- **Scoring:** 25% demo/build, 75% diagnosis, business-impact framing and navigating the room. "The build is a prop."
+  Finish the build early and spend the rest on the story: the so-what, the customer connection, and the case for what
+  to do next, made to a skeptical audience.
+- **Environment:** Databricks Free Edition, which is serverless-only: no classic clusters, and compute policies can't be
+  created there.
+- **Step 1, project scaffold:** a zip from Google Drive with a partial implementation, deployed via DABs. It contains
+  README.md, SETUP.md, FAQ.md and AI_WORKFLOWS.md, which are written as AI context. **Read all four first** when
+  Vikas shares them, and treat the partial implementation as unverified customer code.
+- **Step 2, build and iterate:** refine logic, adjust schemas, add error handling (idempotent writes, data quality
+  checks, retries, reconciliation). Anything worth re-running goes into `resources/*.yml` as a job task.
+- **Step 3, deploy and present:** get it running so it can be demoed live. The presentation layer can be a dashboard,
+  a Genie Space, an app, or a clean notebook. Clarity matters more than the platform.
+- **Concepts the prompt will reference:** System Tables, Unity Catalog, Lakeflow Connect, Compute Policies, Serverless
+  SQL, Declarative Automation Bundles (DABs). Optional: the Databricks AI-Dev-Kit (MCP servers).
+- **Workflow learned in the mock:** pick one source of truth. If Vikas edits in the workspace, re-run jobs from the UI
+  and deploy YAML changes from the workspace bundle panel, never from a stale local copy.
+
 ## Rules
 - The real prompt is under NDA. Keep its contents in this session only. Never commit the real prompt,
   scaffold or data to this repo, and never push them anywhere.
