@@ -24,6 +24,13 @@ runs in Databricks, through the in-workspace Assistant or SQL.
 - **Workflow learned in the mock:** pick one source of truth. If Vikas edits in the workspace, re-run jobs from the UI
   and deploy YAML changes from the workspace bundle panel, never from a stale local copy.
 
+## If this session runs locally with the Databricks CLI authenticated
+- Claude Code may then do the analysis directly: edit bundle files, `databricks bundle deploy/run -t dev`, and run SQL
+  with `databricks api post /api/2.0/sql/statements --json '{"warehouse_id":"<id>","statement":"...","wait_timeout":"30s"}'`
+  (find the id with `databricks warehouses list`).
+- The same discipline still applies: after every change, re-run, reconcile to raw, and show the check, not just the result.
+- Leave dashboards and Genie spaces to the workspace UI and its Assistant; they are faster to build there.
+
 ## Rules
 - The real prompt is under NDA. Keep its contents in this session only. Never commit the real prompt,
   scaffold or data to this repo, and never push them anywhere.
